@@ -4,3 +4,6 @@ Id: EducationEncounter
 Title: "Min fina profil"
 * subject 1..1 MS
 * subject only Reference(EducationPatient)
+ // i EducationEncounter
+* obeys edu-enc-1
+
