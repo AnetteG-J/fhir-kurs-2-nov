@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://example.org/fhir/education/kursig/StructureDefinition/EducationPatient | *Version*:0.1.0 |
-| Draft as of 2026-11-02 | *Computable Name*:EducationPatient |
+| Draft as of 2026-11-03 | *Computable Name*:EducationPatient |
 
  
 Patientprofil för FHIR-utbildningen. Profilen byggs ut steg för steg under kursen. 
@@ -42,7 +42,7 @@ Other representations of profile: [CSV](StructureDefinition-EducationPatient.csv
   "name" : "EducationPatient",
   "title" : "Education Patient",
   "status" : "draft",
-  "date" : "2026-11-02T10:49:13+00:00",
+  "date" : "2026-11-03T07:16:32+00:00",
   "publisher" : "FHIR-utbildning",
   "description" : "Patientprofil för FHIR-utbildningen. Profilen byggs ut steg för steg under kursen.",
   "jurisdiction" : [{
@@ -86,7 +86,14 @@ Other representations of profile: [CSV](StructureDefinition-EducationPatient.csv
   "differential" : {
     "element" : [{
       "id" : "Patient",
-      "path" : "Patient"
+      "path" : "Patient",
+      "constraint" : [{
+        "key" : "edu-pat-1",
+        "severity" : "error",
+        "human" : "Ett personnummer ska bestå av exakt 12 siffror.",
+        "expression" : "identifier\n  .where(system = 'http://electronichealth.se/identifier/personnummer')\n  .all(value.matches('^[0-9]{12}$'))",
+        "source" : "http://example.org/fhir/education/kursig/StructureDefinition/EducationPatient"
+      }]
     },
     {
       "id" : "Patient.identifier",

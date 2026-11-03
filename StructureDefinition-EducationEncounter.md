@@ -9,7 +9,7 @@
 | | |
 | :--- | :--- |
 | *Official URL*:http://example.org/fhir/education/kursig/StructureDefinition/EducationEncounter | *Version*:0.1.0 |
-| Draft as of 2026-11-02 | *Computable Name*:EducationEncounter |
+| Draft as of 2026-11-03 | *Computable Name*:EducationEncounter |
 
 **Användningar:**
 
@@ -38,7 +38,7 @@ Other representations of profile: [CSV](StructureDefinition-EducationEncounter.c
   "name" : "EducationEncounter",
   "title" : "Min fina profil",
   "status" : "draft",
-  "date" : "2026-11-02T10:49:13+00:00",
+  "date" : "2026-11-03T07:16:32+00:00",
   "publisher" : "FHIR-utbildning",
   "jurisdiction" : [{
     "coding" : [{
